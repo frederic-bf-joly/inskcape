@@ -1,0 +1,82 @@
+OBJECTIFS
+
+
+À la fin de ce tutoriel, vous saurez :
+
+> Générer le tracé d'engrenages depuis Woodgears.
+> Exporter, depuis Inkscape, l'image PNG encapsulée dans le fichier PDF.
+> Vectoriser le contour des engrenages.
+
+
+EXPORTER LE PDF DEPUIS WOODGEARS
+
+Pour avoir un tracé des engranges le plus net possible, sans trait à retirer ultérieurement dans Inkscape.
+Décocher : Pitch diameter, Line of contact, Show center, Show cm grid, Animate, Dividing plate
+
+Exporter le fichier au format PDF
+Clicher sur le boutton "Print gears"
+
+S'ouvre l'assistant d'impression Windows
+Dans la rubrique "Destination", sélectionner "Enregistrer au format PDF"
+Dans le menu déroulant "Mise en page", sélectionner le format paysage pour que les deux engrenages apparaissent en totalité sur le document.
+Cliquer sur le bouton "Enregistrer" puis choisir le répertoire de destination.
+
+Astuce : Un fichier PDF est un fichier enveloppe encapsulant à la fois du texte, des images, des polices de caractères, etc. D'où son nom Portable Document File. Nous allons ici récupérer l'image qui nous intéresse pour la traiter.
+
+
+OUVRIR INKSCAPE ET IMPORTER LE PDF
+
+Astuce : J'ai personnalisé l'interface d'Inkscape en noir et blanc avec des icones larges et contrastées. Les boutons et les fontionnalités devraient rester les mêmes sur votre version d'Inkscape.
+
+Importer le fichier PDF dans Inkscape (ou glisser-déposer le fichier sur l'icone du logiciel Inkscape)
+La fenêtre de dialogue "Préférences pour l'importation de fichiers PDF" s'ouvre. Si votre PDF contient plusieurs pages, sélectionner la page où se trouve l'image que vous voulez importer.
+Laisser la case "Incorporer les images" cochés (sinon, nous n'importerons que du texte)
+Cliquer sur "Ok" pour ouvrir le PDF.
+
+Pour info : Dans la barre d'outil, sélectionner la flèche de sélection. Si vous cliquez une fois sur l'image des engrenages, huit poignées de contrôle des dimensions de l'image, représentées par des double-flèches noires, apparaissent. Si vous cliquez une seconde fois, huit poignées de contrôle de la rotation de l'image apparaissent.
+
+
+EXPORTER L'IMAGE DEPUIS LE PDF
+
+Il nous faut maintenant vectoriser (c'est-à-dire de tracer ses contours, interprétables par la découpeuse laser).
+
+Avec la souris, survoler l'image et cliquer-droit. Dans le menu contextuel, nous ne trouvons pas l'option "Vectoriser un objet matriciel...". Pour accéder à cette option, il existe une seconde méthode. Dans le menu horizontal, choisir "Chemin" puis cliquer sur "Vectoriser un objet matriciel...". Dans la boîte de dialogue, si vous cliquez sur le bouton "Mettre à jour", il ne se passe... malheureusement rien. Cela s'explique par le fait que nous n'avons pas sélectionné l'image mais un ensemble d'objets liés à l'image (bordure, etc).
+
+Dans ce cas, où se trouve l'image des deux engrenages ? Pour le savoir, dans la barre de menu horizontale, allez sur Objet > Objets... La boîte de boîte de dialogue qui vient de s'ouvir est un explorateur de tous les objets contenus dans le fichier PDF. Ces objets sont rangés dans des dossiers préfixés par la lette "g". Si, maintenant, vous cliquez sur les engrenages, le dossier où se localiser l'image est activé. Il ne reste plus qu'à ouvrir tous les sous-dossiers emboîités jusqu'à l'image que nous recherchons. Dans mon exemple, le chemin de mon image est g762/g764/g770/image776.
+
+Maintenant, si vous sélectionnez l'image "image776" avec la souris (clic gauche), puis que vous cliquez-droit.
+
+Survoler l'image et cliquer-droit. Dans le menu contextuel, nous ne trouvons pas l'option "Vectoriser un objet matriciel...", le menu contextuel présente l'option "Vectoriser un objet matriciel...". Il est désormais possible de traiter l'image pour la vectoriser. Cependant, nous n'allons pas traiter l'image dans le PDF. D'abord, vous allez l'exporter dans un fichier individuel. Pour cela, sélectionnez l'image image776 puis, dans la barre de menu horizontale, allez sur Fichier > Exporter au format PNG... Dans la boîte de dialogue, choisissez l'onglet "Sélection" pour n'exporter que l'objet activé c'est-à-dire l'image des engrenages. Dans la rubrique "Taille de l'image", si vous constatez que la résolution de l'export est insuffisante, ajustez la résolution (en ppp) pour au moins atteindre une hauteur de 1000 pixels. Ensuite, si ce n'est pas fait, choisissez le répertoire d'export en cliquant sur le bouton "Exportez sous...". Enfin, validez l'export en cliquant sur "Exporter" (ce bouton se situe tout en bas de la boîte de dialogue et il est parfois caché).
+
+Bravo ! Vous venez d'exporter votre image d'engrenages, sans ayant même dû retirer à la main et individuellement le texte et les traits inutiles.
+
+
+VECTORISER L'IMAGE PNG DANS INKSCAPE
+
+Fermez le fichier PDF et importez le fichier image au format PNG. Une boîte de dialogue "Import d'une image matricielle png" apparaît. Il s'agit d'importer le fichier PNG avec la meilleure qualité possible. Pour cela, dans la rubrique "Résolution de l'image", j'ai coché "Résolution d'importation par défaut". Puis dans la rubrique "Mode de rendu de l'image", j'ai coché "Lisse (optimisé pour la qualité)".
+
+Pour info : Si l'image vous paraît dégradée, trop petite par exemple, revenez sur cette étape d'import dans le logiciel Inkscape. Dans la rubrique "Résolution de l'image", essayez, par exemple, de cocher "Déduire du fichier" au lieu de "Résolution d'importation par défaut". Vous pouvez vérifier la qualité de l'image importée en cliquant sur l'image puis, en inspectant la largeur et la hauteur de l'espace de travail.
+
+Une fois l'image PNG importée, cliquez-droit "Vectoriser un objet matriciel" ou cliquez-gauche "Vectoriser un objet matriciel". La vectorisation a pour but de convertir les lignes représentées par des séries de pixels en segments (lignes et courbes).
+
+Astuce : Au fait, c'est quoi un objet matriciel ? Une image pixellisée, chaque pixel situé sur une grille.
+
+Dans la boîte de dialogue  "Vectoriser un objet matriciel", sélectionner l'onglet "Vectoriser un objet matriciel".
+Choisir l'onglet "Une seule passe", car le trait est rudimentaire et un seul traitement du filtre/scan suffira à Inkscape pour détourer les engrenages.
+Concernant la méthode de vectorisation : sélectionner "Détection de contour"
+
+Avant d'aller plus loin, cliquez sur le bouton "Mettre à jour". Vous devriez voir apparaître un rendu de la vectorisation.
+
+Concernant les paramètres de détourage, j'ai conservé les valeurs par défaut : Seuil de contour : 0.650 / Mouchetures : 2 / Adoucir les coins : 1.00 / Optimisé : 0.2. N'hésitez pas à ajuster ces derniers pour obtenir le tracé le plus net possible. Il vous est toujours possible de réinitialiser les valeurs pas défaut en cliquant sur le bouton "Rétablir". Une fois que vous êtes satisfait.e du rendu, validez en cliquant sur "Valider". Attention : aucun pop-up ne signale que la vectorisation est déjà terminée et il vous faut même fermer la boîte de dialogue pour constater le changement à l'écran ! En effet, les contours des engrenages s'est épaissi ou, pour être exact, une couche s'est ajoutée sur l'image donnant l'impression que l'épaisseur du trait s'est élargie. Si vous ouvrez la boîte permettant d'explorer les objets sur la scène, vous constaterez que deux objets s'y trouvent : image12 (le nom de code de l'image au format PNG) et path14 (le nom de code du tracé vectoriel, aussi appelé chemin).
+
+Supprimez "image12" pour ne conserver que "path14". À présent, si vous double-cliquez sur le dessin, vous devriez voir apparaître une série de petit carrés contigus tout le long des engrenages. Ce sont les noeuds joignants les segments. Ce sont ce segments que la découpeuse laser va suivre pour découper les objets.
+ 
+
+UN DERNIER PETIT NETTOYAGE AVANT DE FINIR
+
+Il ne vous aura pas échappé qu'un petit de texte ou des segments indésirables apparaissent autour des engrenages. Pour vous en débarrasser, sélectionnez l'outil d'édition des noeuds (la deuxième icone sur la barre de menu d'édition). Puis cliquez sur la totalité de l'image pour l'activer. Puis, avec l'outil (qui ressemble à un fin triangle noir allongé), sélectionnez les lettres et les segments inutiles en sélectionnant une zone rectangulaire. Enfin, appuyez sur la touche "Suppr" du clavier.
+
+
+Astuce : Comment je peux savoir si j'ai bien sélectionné les segments ? Il suffit de faire un zoom avant sur la zone que vous avez sélectionnée. Vous devriez observer, en plus des noeuds (les petits carrés blancs) des poignées de rebroussement (les petits cercles blancs entre des segments bleus).
+
+Bravo, il ne vous reste plus qu'à enregister le résultat au format SVG.
